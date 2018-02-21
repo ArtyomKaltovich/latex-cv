@@ -1,0 +1,32 @@
+# https://github.com/github/gitignore/blob/master/TeX.gitignore
+
+# Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+/.idea
+*.recover.bak~
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.zip
+*.nav
+*.snm
