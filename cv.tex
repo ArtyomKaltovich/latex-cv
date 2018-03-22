@@ -78,6 +78,7 @@
 \definecolor{linkedin}{HTML}{0085AE}
 \definecolor{skype}{HTML}{12A5F4}
 \definecolor{gmail}{HTML}{c71610}
+\definecolor{kaggle}{HTML}{20beff}
 
 \newcommand{\github}{ArtyomKaltovich}
 \newcommand{\mail}{kaltovichartyom@gmail.com}
@@ -85,8 +86,8 @@
 \newcommand{\linkedin}{artyomkaltovich}
 
 \newcommand{\WorkExpCompany}[2]{
-    \multicolumn{2}{c}{\bfseries\emph{#1}}  & \bfseries #2 \\
-    \multicolumn{3}{c}{} \\
+    \multicolumn{2}{c}{\bfseries\emph{#1}}  & \bfseries #2 \\*
+    \multicolumn{3}{c}{} \\*
 }
 \newcommand{\WorkExpProject}[5]{
         \multirow{4}{*}{} 
@@ -109,14 +110,23 @@
     \multirow{6}{*}{\includegraphics[width=4cm]{Artsiom_Kaltovich.jpg}\hspace{15mm}}   
     & \vspace{2mm} \\
    	& \large\textnormal{\faGithub} {\href{https://github.com/\github}{\github}} \vspace{2mm} \\
+    & \large\textnormal{\textcolor{kaggle}{\textbf{k}}} {\href{https://www.kaggle.com/linearleopard}{Artyom Kaltovich}} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com/in/\linkedin}{\linkedin} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{gmail}{\faAt}} \href{mailto:\mail}{\mail} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{skype}{\faSkype}} \href{skype:\skype?userinfo}{\skype} \vspace{2mm} \\ 
     & \vspace{2mm} \\
 \end{tabular}
 
-\section{Professional Profile}
+\section{Summary}
+I graduated Belarussian State University of Informatics, Faculty of Computer Systems and Networks with incline to asymmetric cryptography. Also I've completed a number of online courses in computer science, machine learning, mathematics and economy.
 
+For 4.5 years I’ve worked as system programmer in IBA Group on supporting database-management system UDS/SQL for BS2000/OSD mainframes. Currently I am working in Workfusion Inc. in Automation Academy department, improving online courses, making samples and teaching student in machine learning sphere.
+
+I am attracted by machine learning, data science, statistics and possibilities they open. I like learning new, besides it I am interested in math, physics, history, languages and economy.
+
+I used to dance Lindy hop and Blues dances. I would like to learn how to play ukulele and painting.
+
+\section{Professional Profile}
 \begin{itemize}[label=\textcolor{blue}{$\succ$}]
     \rmfamily
     \setlength\itemsep{-1mm}\vspace{1mm}
@@ -159,7 +169,7 @@
 } 
 \end{tabular}
 
-\subsection{Summary}
+\subsection{Detail}
 \hspace{0.75cm}
 \begin{tabular}{lp{10cm}}
     Programming Languages:& \small Assembler (x86, z/OS, BS2000 OSD), C,C++, C\#, Cobol, Delphi, \textbf{Groovy}, \textbf{Java}, PHP, \textbf{Python}, SPL, \textbf{SQL}, Ruby \\ 
