@@ -35,9 +35,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\large\scshape\raggedright}{}{1cm}{}[\titlerule]
-\titlespacing{\section}{0pt}{0.5cm}{3pt}
-\titlespacing{\subsection}{1cm}{3pt}{3pt}
+\titlespacing{\section}{0pt}{3pt}{3pt}
 %Tweak a bit the top margin
 %\addtolength{\voffset}{-1.3cm}
 \usepackage[absolute]{textpos}
@@ -45,6 +43,7 @@
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
 
 \usepackage{tikz}
 \usetikzlibrary{mindmap,shadows}
@@ -70,15 +69,12 @@
 \pdfmapfile{fontawesome.map}
 \usepackage{multirow}
 \usepackage{makecell}
-\usepackage{longtable}
-\usepackage{enumitem}
 
-\pagenumbering{gobble}
 
 \definecolor{linkedin}{HTML}{0085AE}
 \definecolor{skype}{HTML}{12A5F4}
 \definecolor{gmail}{HTML}{c71610}
-\definecolor{kaggle}{HTML}{20beff}
+\definecolor{iba}{HTML}{83c3cf}
 
 \newcommand{\github}{ArtyomKaltovich}
 \newcommand{\mail}{kaltovichartyom@gmail.com}
@@ -86,60 +82,33 @@
 \newcommand{\linkedin}{artyomkaltovich}
 
 \newcommand{\WorkExpCompany}[2]{
-    \multicolumn{2}{c}{\bfseries\emph{#1}}  & \bfseries #2 \\*
-    \multicolumn{3}{c}{} \\*
+    \multicolumn{2}{c}{\bfseries\emph{#1}}  & \bfseries #2 \\
+    \multicolumn{3}{c}{} \\
 }
 \newcommand{\WorkExpProject}[5]{
-        \multirow{4}{*}{} 
-        & \em \makecell[r]{#1\\#2}  & #3 \\* 
-        &Responsibilities & \small #4\\*
-        &Environment & \small #5\\*
-        \multicolumn{3}{c}{} \\
+    \multirow{3}{*}{} 
+    & \em \makecell[r]{#1\\#2}  & #3 \\ 
+    &Responsibilities & \small #4\\
+    &Environment & \small #5\\
+    \multicolumn{3}{c}{} \\
 }
 
 \begin{document}
 
-\par{\centering{
-		\Huge Artsiom \textsc{Kaltovich} \\ 
-		\large Software Engineer\\
-   		\large Minsk, Belarus
-	}\bigskip
-\par}
+\par{\centering
+		{\Huge Artsiom \textsc{Kaltovich} \\ \medskip
+		{\large Software Engineer}
+	}\bigskip\par}
 
 \begin{tabular}[\textwidth]{ll}
     \multirow{6}{*}{\includegraphics[width=4cm]{Artsiom_Kaltovich.jpg}\hspace{15mm}}   
     & \vspace{2mm} \\
    	& \large\textnormal{\faGithub} {\href{https://github.com/\github}{\github}} \vspace{2mm} \\
-    & \large\textnormal{\textcolor{kaggle}{\textbf{k}}} {\href{https://www.kaggle.com/linearleopard}{linearleopard}} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com/in/\linkedin}{\linkedin} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{gmail}{\faAt}} \href{mailto:\mail}{\mail} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{skype}{\faSkype}} \href{skype:\skype?userinfo}{\skype} \vspace{2mm} \\ 
     & \vspace{2mm} \\
 \end{tabular}
-
-\section{Summary}
-I graduated Belarussian State University of Informatics, Faculty of Computer Systems and Networks with incline to asymmetric cryptography. Also I've completed a number of online courses in computer science, machine learning, mathematics and economy.
-
-For 4.5 years I’ve worked as system programmer in IBA Group on supporting database-management system UDS/SQL for BS2000/OSD mainframes. Currently I am working in Workfusion Inc. in Automation Academy department, improving online courses, making samples and teaching student in machine learning sphere.
-
-I am attracted by machine learning, data science, statistics and possibilities they open. I like learning new, besides it I am interested in math, physics, history, languages and economy.
-
-I used to dance Lindy hop and Blues dances. I would like to learn how to play ukulele and painting.
-
-\section{Professional Profile}
-\begin{itemize}[label=\textcolor{blue}{$\succ$}]
-    \rmfamily
-    \setlength\itemsep{-1mm}\vspace{1mm}
-    \item System programmer, 4+ years of experience in the system programming.
-    \item Java developer, 4+ years of experience in java programming, including problem resolution and testing, design of user interface.
-    \item Background knowledge in computer organization and architecture, operating systems.
-    \item Knowledge of common data structures and algorithms.
-    \item Good problem solving skills.
-    \item Ability to work successfully both individually and as a team member.
-    \item Good responsibility and motivation
-    \item Practical knowledge of object-oriental, structured and functional programming, understanding of principles of software development, machine learning, data science and cryptography.
-    \normalfont
-\end{itemize}
 
 \section{Skills}
 
@@ -148,10 +117,13 @@ I used to dance Lindy hop and Blues dances. I would like to learn how to play uk
     \textbf{Programming},
     \textbf{Python},
     \textbf{Java},
+    \textbf{Ruby},
+    \textbf{Cobol},
     \textbf{Asm},
     \textbf{html}\\\textbf{css},
     \textbf{xml},
-    \textbf{sql}
+    \textbf{sql},
+    \textbf{Bash}
 } \hspace{10mm} &
 \smartdiagramset{
 	bubble center node size = 3.5cm,
@@ -166,40 +138,28 @@ I used to dance Lindy hop and Blues dances. I would like to learn how to play uk
 } 
 \end{tabular}
 
-\subsection{Detail}
-\hspace{0.75cm}
-\begin{tabular}{lp{10cm}}
-    Programming Languages:& \small Assembler (x86, z/OS, BS2000 OSD), C,C++, C\#, Cobol, Delphi, \textbf{Groovy}, \textbf{Java}, PHP, \textbf{Python}, SPL, \textbf{SQL}, Ruby \\ 
-    Web Technologies:&\small .NET, J2EE, \textbf{Django}, Flask, Ruby on Rails\\ 
-    Databases:&\small MS SQL, \textbf{MySQL}, SQLite, UDS/SQL\\ 
-    Operating Systems:&\small Android, BS2000 OSD, \textbf{Linux}, Windows, z/OS\\ 
-    Other Skills:&\small CSS, Eclipse SDK and RCP, IDEF, JFace, \textbf{git}, \LaTeX, \textbf{HTML}, Mathematica, Octave(Matlab), SWT, UML, \textbf{XML}, VHDL\\ 
-\end{tabular} 
+\section{Professional Profile}
 
-\subsection{Languages}
-\hspace{0.75cm}
-\begin{tabular}{rl}
-    Belarussian: & Bilingual\\
-    Russian: & Bilingual\\
-    English: & Fluent\\
-    German: & Intermediate\\
-    Spanish: & Basic Knowledge\\
-\end{tabular}
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+    \rmfamily
+    \setlength\itemsep{-2mm}
+    \item System programmer, 4+ years of experience in the system programming.
+    \item Java developer, 4+ years of experience in java programming, including problem resolution and testing, design of user interface.
+    \item Background knowledge in computer organization and architecture, operating systems.
+    \item Knowledge of common data structures and algorithms.
+    \item Good problem solving skills.
+    \item Ability to work successfully both individually and as a team member.
+    \item Good responsibility and motivation
+    \item Practical knowledge of object-oriental, structured and functional programming, understanding of principles of software development, machine learning, data science and cryptography.
+    \normalfont
+\end{itemize}
 
 \section{Work Experience}
 
-\begin{longtable}{lr|p{11cm}}
-    % SK Hynix
-    \WorkExpCompany{Jun 2018 - present}{SK Hynix Memory Solutions Eastern Europe}
-    \WorkExpProject{Jun 2018 - present}
-        {\makecell[r]{Software Engineer}}
-        {NAND Testing and Emulating}
-        {Creating model and software for emulating and testing NAND Firmware}
-        {Python, C}
-        
+\begin{tabular}{lr|p{11cm}}
     % Workfusion
-    \WorkExpCompany{Dec 2017 – Jun 2018}{Workfusion}
-    \WorkExpProject{Dec 2017 – Jun 2018}
+    \WorkExpCompany{Dec 2017 – Present}{Workfusion}
+    \WorkExpProject{Dec 2017 – Present}
         {\makecell[r]{Software Engineer}}
         {Automation Academy}
         {Providing environment for education of partners' students, included creating samples, Q\&A sessions, course creating and training, grading assignments, troubleshooting. Communication with development team on issues, future requests, implementation, etc}
@@ -214,7 +174,8 @@ I used to dance Lindy hop and Blues dances. I would like to learn how to play uk
         {Linux, Python, R, Matplotlib, Biopython, Bokeh, PyPlot, sklearn, pandas, Microsoft Excel, Libreoffice Calc}
     
     % IBA
-    \WorkExpCompany{Jun 2013 – Dec 2017}{IBA Group}
+    \rowcolor{iba}
+    \WorkExpCompany{Jun 2013 – Mar 2017}{IBA Group}
     
     % eclipse addon
     \WorkExpProject{Jun 2016 – Mar 2017}
@@ -237,17 +198,17 @@ I used to dance Lindy hop and Blues dances. I would like to learn how to play uk
         {Support and maintenance of UDS/SQL, including bug fixing, new features development, testing, new release/version creating}
         {BS2000, AID, COBOL, LMS, SDF, OpenFT, Assembler, SPL}
     
-    %Internal at IBA
+    %Intern at IBA
     \WorkExpProject{Jul 2013 – Oct 2013}
         {Developer/Intern}
         {Internal IBA}
         {Application development on COBOL, SPL4 and Assembler: education of BS2000 operating system, studying of BS2000 system tools: LMS, EDT, BINDER, AID}
         {z/OS, BS2000, Cobol, Assembler}
-\end{longtable}
+\end{tabular}
 
 %Section: Education
 \section{Education}
-\begin{tabular}[\textwidth]{r|p{11cm}}
+\begin{tabular}{r|p{11cm}}
     % bsuir 
     \em Sep 2010 - Jun 2015  & \textbf{Belarusian State University of Informatics and Radioelectronics}, \textit{Minsk} \\
     Faculty & Computer System and Networks\\ 
@@ -258,23 +219,27 @@ I used to dance Lindy hop and Blues dances. I would like to learn how to play uk
 \end{tabular}
 
 \section{Scholarships and Certificates}
-\begin{tabular}[\textwidth]{r|p{13cm}}
-    \em Coursera
-    & \textit{Machine Learning}~-~Stanford University\\
-    & \textit{Cryptography I}~-~Stanford University\\
-    & \textit{Introduction to Mathematical Thinking}~-~Stanford University\\
-    & \textit{\textcyrillic{Теория игр} (Game Theory)}~-~National Research University Higher School of Economics, Moscow\\
-    & \textit{Экономика для неэкономистов (Economics for non-economists)}~-~National Research University Higher School of Economics, Moscow\\
-    & \textit{Документы и презентации в LaTeX (Introduction to LaTeX)}~-~National Research University Higher School of Economics, Moscow\\ 
-    & \textit{Введение в машинное обучение (Introduction to Machine Learning)}~-~National Research University Higher School of Economics, Moscow. Yandex School of Data Analysis\\
-    \multicolumn{2}{c}{} \\	
-    
-    \em openedu.ru
-    & \textit{Макроэкономика(Macroeconomics)} - National Research University Higher School of Economics, Moscow\\
-    \multicolumn{2}{c}{} \\	
-    
-    \em udacity.com
-    & \textit{ud120: Intro to Machine Learning}\\
+\begin{tabular}{r|p{11cm}}
+    % Coursera 
+    \em Coursera  & \textit{\textcyrillic{Теория игр} (Game Theory)} - National Research University Higher School of Economics, Moscow. \\
+    & Computer System and Networks\\ 
+    & Software for Information Technologies\\
+    & Asynchronous encryption\\
+    & 8.8 \\
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Italian:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\textsc{French:}&Basic Knowledge\\
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+ Basic Knowledge:& \textsc{php}, my\textsc{sql}, \textsc{html}, Access, \textsc{Linux}, ubuntu, Latex\\
+Intermediate Knowledge:& \textsc{vba}, Excel, Word, PowerPoint\\
 \end{tabular}
 
 \section{Interests and Activities}
