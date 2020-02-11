@@ -111,7 +111,8 @@
     & \small links are clickable, but not in github preview :)\\
    	& \large\textnormal{\faGithub} {\href{https://github.com/\github}{\github}} \vspace{2mm} \\
     & \large\textnormal{\textcolor{kaggle}{\textbf{k}}} {\href{https://www.kaggle.com/linearleopard}{linearleopard}} \vspace{2mm} \\
-   	& \large\textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com/in/\linkedin}{\linkedin} \vspace{2mm} \\
+    & \large\textnormal{\includegraphics[height=0.7\baselineskip]{rosalind.png} {\href{http://rosalind.info/users/kaltovichartyom/}{kaltovichartyom}}} \vspace{2mm} \\
+   	%& \large\textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com/in/\linkedin}{\linkedin} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{gmail}{\faAt}} \href{mailto:\mail}{\mail} \vspace{2mm} \\
    	& \large\textnormal{\textcolor{skype}{\faSkype}} \href{skype:\skype?userinfo}{\skype} \vspace{2mm} \\ 
     & \vspace{2mm} \\
@@ -122,12 +123,11 @@
 \begin{tabular}[\textwidth]{rl}
 \smartdiagram[bubble diagram]{
     \textbf{Programming},
-    \textbf{Python},
-    \textbf{Java},
-    \textbf{Asm},
-    \textbf{html}\\\textbf{css},
-    \textbf{xml},
-    \textbf{sql}
+    \textbf{Machine}\\\textbf{Learning},
+    \textbf{Statistic},
+    \textbf{Data}\\\textbf{Structures},
+    \textbf{Algorithms},
+    \textbf{Python}
 } \hspace{10mm} &
 \smartdiagramset{
 	bubble center node size = 3.5cm,
@@ -138,18 +138,18 @@
     \textbf{Respon}\\\textbf{sible},
     \textbf{Innova}\\\textbf{tive},
     \textbf{Ambitious},
-    \textbf{funny}
+    \textbf{Inoffensive}
 } 
 \end{tabular}
 
 \subsection{Detail}
 \hspace{0.75cm}
 \begin{tabular}{lp{10cm}}
-    Programming Languages:& \small Assembler (x86, z/OS, BS2000 OSD), C,C++, C\#, Cobol, Delphi, \textbf{Groovy}, \textbf{Java}, PHP, \textbf{Python}, SPL, \textbf{SQL}, Ruby \\ 
-    Web Technologies:&\small .NET, J2EE, \textbf{Django}, Flask, Ruby on Rails\\ 
-    Databases:&\small MS SQL, \textbf{MySQL}, SQLite, UDS/SQL\\ 
+    Programming Languages:& \small Assembler (x86, z/OS, BS2000 OSD), C,C++, C\#, Cobol, Delphi, \textbf{Groovy}, Java, \textbf{Python}, SPL, SQL, Ruby \\ 
+    Web Technologies:&\small .NET, J2EE, Django, Flask, Ruby on Rails\\ 
+    Databases:&\small MS SQL, \textbf{MySQL}, SQLite, UDS/SQL, OneTick\\ 
     Operating Systems:&\small Android, BS2000 OSD, \textbf{Linux}, Windows, z/OS\\ 
-    Other Skills:&\small CSS, Eclipse SDK and RCP, IDEF, JFace, \textbf{git}, \LaTeX, \textbf{HTML}, Mathematica, Octave(Matlab), SWT, UML, \textbf{XML}, VHDL\\ 
+    Other Skills:&\small \textbf{git}, Mathematica, Octave(Matlab), MiniZinc, \LaTeX, HTML, CSS, IDEF, UML, VHDL, Sphinx\\ 
 \end{tabular} 
 
 \subsection{Languages}
@@ -158,16 +158,25 @@
     Belarussian: & Bilingual\\
     Russian: & Bilingual\\
     English: & Fluent\\
-    German: & Intermediate\\
+    German: & Pre-Intermediate\\
 \end{tabular}
 \newpage
 
 \section{Work Experience}
 
 \begin{longtable}{lr|p{11cm}}
+    % OneTick
+    \WorkExpCompany{Sep 2019 - present}{Big Data Solutions}
+    \WorkExpProject{Sep 2018 - present}
+        {\makecell[r]{Software Engineer}}
+        {Creating Pandas-like wrapper for OneTick database query language}
+        {Creating architecture and implementing of Pandas-like representation of OneTick query language and database objects. Creating tests for implementation.\linebreak
+        Collaboration with OneTick developers for simplifying and improvment of the wrapper. Code reviewing. Creating and updating Sphinx doc.}
+        {Python, OneTick, Sphinx, pytest, fintech}
+        
     % SK Hynix
-    \WorkExpCompany{Jun 2018 - present}{SK Hynix Memory Solutions Eastern Europe}
-    \WorkExpProject{Jun 2018 - present}
+    \WorkExpCompany{Jun 2018 - Aug 2019}{SK Hynix Memory Solutions Eastern Europe}
+    \WorkExpProject{Jun 2018 - Aug 2019}
         {\makecell[r]{Software Engineer}}
         {NAND Testing and Emulating}
         {Creating model and software for emulating and testing NAND Firmware}
@@ -210,6 +219,11 @@
 %Section: Education
 \section{Education}
 \begin{tabular}[\textwidth]{r|p{11cm}}
+    % Bionformatics Institute
+    \em Sep 2019 - present  & \textbf{Bionformatic Institute}, \textit{Saint-Petersburg} \\
+    Department & Algorithmic Bioinformatics \\
+    \multicolumn{2}{c}{} \\	
+    
     % bsuir 
     \em Sep 2010 - Jun 2015  & \textbf{Belarusian State University of Informatics and Radioelectronics}, \textit{Minsk} \\
     Faculty & Computer System and Networks\\ 
@@ -246,7 +260,9 @@
     Bioinformatics Institute, St.Petersburg\\
     & \textit{\textcyrillic{Молекулярная биология и генетика} (Molecular Biology and Genetics)} - Bioinformatics Institute, St.Petersburg\\
     & \textit{\textcyrillic{Основы дискретной математики} (Discrete mathematics: Basics)} - Computer Science Center (CSC - JetBrains, St.Petersburg)\\
-    & \textit{\textcyrillic{Математический анализ (часть 1)} (Calculus ()Part I))} - Computer Science Center (CSC - JetBrains, St.Petersburg)\\
+    & \textit{\textcyrillic{Математический анализ (часть 1)} (Calculus (Part I))} - Computer Science Center (CSC - JetBrains, St.Petersburg)\\
+    & \textit{\textcyrillic{Теория вероятностей} (Probability theory)} - Computer Science Center (CSC - JetBrains, St.Petersburg)\\
+    & \textit{\textcyrillic{Молекулярная биология клетки} (Cell Molecular Biology)} - Bioinformatics Institute, St.Petersburg\\
     \multicolumn{2}{c}{} \\	
     
     \em udacity.com
